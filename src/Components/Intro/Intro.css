@@ -1,0 +1,104 @@
+#intro{
+    height: calc(100vh - 5vh);
+    /* background: red; */
+    width: 100vw;
+    max-width:75rem;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s;
+}
+.bg{
+    position: absolute;
+    top: 0rem;
+    right: 0;
+    z-index: -1;
+    object-fit: cover;
+    height: 100vh;
+}
+.introContent{
+height: 100vh;
+width: 100vw;
+padding: 2rem;
+font-size: 2rem;
+font-weight: 700;
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin-top: 0.5rem;
+}
+.introName{
+    color: yellow;
+}
+/* .bg2{
+    z-index: -1;
+    height: 530px;
+    top: -1px;
+} */
+.hello{
+    font-size: 1.75rem;
+    font-weight: 300;
+}
+.intropara{
+    font-size: medium;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.btn{
+    background: white;
+    margin: 1rem 0;
+    padding: 0.75rem 1.5rem;
+    border:none;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnImg {
+object-fit: cover;
+margin: 0 0.25rem;
+height: 1rem;
+}
+
+.btn:hover {
+    color: #111;
+    background: #39ff14;
+    box-shadow: 0 0 20px #39ff14;
+}
+.atags{
+    width: fit-content;
+}
+
+.mes{
+    height: 2rem;
+}
+/* mediqureies */
+
+@media screen and (max-width:840px){
+    .bg{
+        right: -10vw;
+    }
+    .introContent{
+        font-size: 10vw;
+        margin-top: 6.5rem;
+    }
+    
+}
+
+@media screen and (max-width:558px){
+    .bg{
+        right: -20vw;
+    }
+    .introContent{
+        margin-top: 6.5rem;
+    }
+
+}
+
+@media screen and (max-width:300px) {
+    .bg{
+        right: -60vw;
+    }
+}
+
