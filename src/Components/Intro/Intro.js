@@ -28,7 +28,7 @@ export default function Intro() {
             <div className="message-container2">
                 <div className="pop-up2">
                     <img src={wrong} alt="" />
-                    <h2>Some Error</h2>
+                    <h1>Some Thing went wrong</h1>
                     <p id='errors-handle'></p>
                 </div>
             </div>

@@ -53,19 +53,7 @@ flex-wrap: wrap;
     justify-content: center;
     /* width: 100vw; */
 }
-.pop-up{
-    width: 300px;
-    height: 200px;
-    border: 3px solid red;
-    background-color: #ffff;
-    color: black; 
-     border-radius: 6px;
-    text-align: center;
-    padding: 0 30px 30px;
-    position: fixed;
-    z-index: 10;
-    display: none;
- } 
+
  .message-container3{
     display: flex;
     justify-content: center;

@@ -12,25 +12,56 @@ import  emailjs from '@emailjs/browser';
 import { useRef } from 'react'
 import {Link} from 'react-scroll';
 export default function Contact() {
+  // const form = useRef();
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
+  //   emailjs.sendForm('service_6gw5ib1', 'template_r2v2ynk', form.current, 'l5Hz3RgIx0NRmjxjB')
+  //     .then((result) => {
+  //         console.log(result.text);
+  //         document.querySelector(".pop-up").style.display="block";
+  //         setTimeout(()=>{
+  //           document.querySelector(".pop-up").style.display="none";
+  //         },2000)
+  //     }, (error) => {
+  //         console.log(error.text+"my");
+  //         document.querySelector(".pop-up2").style.display="block";
+  //         setTimeout(()=>{
+  //           document.querySelector(".pop-up2").style.display="none";
+  //         },2000)
+  //     });
+  // };
   const form = useRef();
-  const sendEmail = (e) => {
-    e.preventDefault();
 
-    emailjs.sendForm('service_6gw5ib1', 'template_r2v2ynk', form.current, 'l5Hz3RgIx0NRmjxjB')
-      .then((result) => {
-          console.log(result.text);
-          document.querySelector(".pop-up").style.display="block";
-          setTimeout(()=>{
-            document.querySelector(".pop-up").style.display="none";
-          },2000)
-      }, (error) => {
-          console.log(error.text+"my");
-          document.querySelector(".pop-up2").style.display="block";
-          setTimeout(()=>{
-            document.querySelector(".pop-up2").style.display="none";
-          },2000)
-      });
-  };
+const sendEmail = (e) => {
+  e.preventDefault();
+
+  // Validate the form fields
+  const to_name = form.current.querySelector('[name="to_name"]');
+  const your_email = form.current.querySelector('[name="your_email"]');
+  const message = form.current.querySelector('[name="message"]');
+
+  if (!to_name.value || !your_email.value || !message.value) {
+    alert("Please fill out all required fields.");
+    return;
+  }
+
+  // Rest of your email sending logic
+  emailjs.sendForm('service_6gw5ib1', 'template_r2v2ynk', form.current, 'l5Hz3RgIx0NRmjxjB')
+    .then((result) => {
+      console.log(result.text);
+      document.querySelector(".pop-up").style.display = "block";
+      setTimeout(() => {
+        document.querySelector(".pop-up").style.display = "none";
+      }, 2000);
+    }, (error) => {
+      console.log(error.text + "my");
+      document.querySelector(".pop-up2").style.display = "block";
+      setTimeout(() => {
+        document.querySelector(".pop-up2").style.display = "none";
+      }, 2000);
+    });
+};
+
 
   return (
     <section id='ContactPage'>
@@ -57,7 +88,7 @@ export default function Contact() {
         <span className="ContactDec">Please fill out the form below to discuss any 
           work opportunities</span>
         <form ref={form} className="ContactForm">
-          <input type="text" name="to_name"  className="name" placeholder='Your Name' required />
+          <input type="text" name="to_name"  className="name" placeholder='Your Name' required/>
           <input type="email" name="your_email"  className="email" placeholder='Your Email' required/>
           <textarea name="message" rows="5" className='msg' placeholder='Your msg' required>
           </textarea>

@@ -81,13 +81,13 @@ height: 1rem;
 }
 .pop-up{
     width: 300px;
-    height: 200px;
-    border: 3px solid red;
+    height: 250px;
+    border: 3px solid #39ff14;
     background-color: #ffff;
     color: black; 
      border-radius: 6px;
     text-align: center;
-    padding: 0 30px 30px;
+    padding: 0 20px 20px;
     position: fixed;
     z-index: 10;
     display: none;
