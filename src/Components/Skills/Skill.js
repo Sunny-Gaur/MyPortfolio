@@ -15,7 +15,7 @@ export default function Skills() {
         <>
             <section className="skills" id='Skill' data-aos="zoom-in-up" data-aos-duration="3000">
                 <span className='skillTitle'><p className="skilltext" data-aos="zoom-in-up">Skills</p></span>
-                <span className='skillDescription' data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">I am a skilled and juniour Webdevloper with little bit experience in all skills which i have</span>
+                <span className='skillDescription' data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">I'm a skilled front-end web developer proficient in HTML, CSS, and JavaScript. With a passion for creating intuitive user interfaces and a knack for responsive designI also have experience with Bootstrap and React, enabling me to build dynamic and engaging web applications."</span>
                 <br />
                 <br />
                 <div className="first">

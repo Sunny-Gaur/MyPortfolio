@@ -20,15 +20,11 @@ export default function Navbar(){
             <Link activeClass="active" to="works" spy={true} smooth={true} offset={-70} className="desktopmenuListItem">Portfolio</Link>
             <Link activeClass="active" to="clients" spy={true} smooth={true} offset={-70} className="desktopmenuListItem">Clients</Link>
             </div>
-
             <button className="destopmenubtn" onClick={()=>{
                 document.querySelector('.Contact').scrollIntoView({behavior:'smooth'})
             }}>
             <img src={Contact} alt="" className="destopmenuImg" />Contact Me
             </button>
-
-
-
             {/* burgur menu */}
             <img src={menu} alt="Menu"  className="mobMenu" onClick={()=>setShowmenu(!Showmenu)}/>
             <div className="Navmenu"style={{display:Showmenu?"flex":"none"}}>

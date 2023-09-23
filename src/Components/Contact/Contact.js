@@ -10,7 +10,7 @@ import Link3 from "../../Assets/Assets/instagram.png";
 import Link4 from "../../Assets/Assets/youtube.png";
 import  emailjs from '@emailjs/browser';
 import { useRef } from 'react'
-
+import {Link} from 'react-scroll';
 export default function Contact() {
   const form = useRef();
   const sendEmail = (e) => {
@@ -19,9 +19,16 @@ export default function Contact() {
     emailjs.sendForm('service_6gw5ib1', 'template_r2v2ynk', form.current, 'l5Hz3RgIx0NRmjxjB')
       .then((result) => {
           console.log(result.text);
-          alert("Thanks for Contact us")
+          document.querySelector(".pop-up").style.display="block";
+          setTimeout(()=>{
+            document.querySelector(".pop-up").style.display="none";
+          },2000)
       }, (error) => {
-          console.log(error.text);
+          console.log(error.text+"my");
+          document.querySelector(".pop-up2").style.display="block";
+          setTimeout(()=>{
+            document.querySelector(".pop-up2").style.display="none";
+          },2000)
       });
   };
 
@@ -50,15 +57,15 @@ export default function Contact() {
         <span className="ContactDec">Please fill out the form below to discuss any 
           work opportunities</span>
         <form ref={form} className="ContactForm">
-          <input type="text" name="to_name"  className="name" placeholder='Your Name' />
-          <input type="email" name="your_email"  className="email" placeholder='Your Email' />
-          <textarea name="message" rows="5" className='msg' placeholder='Your msg'>
+          <input type="text" name="to_name"  className="name" placeholder='Your Name' required />
+          <input type="email" name="your_email"  className="email" placeholder='Your Email' required/>
+          <textarea name="message" rows="5" className='msg' placeholder='Your msg' required>
           </textarea>
           <button type='submit' className='submitbtn' onClick={sendEmail}>Submit</button>
           <div className="links">
-            <img src={Link1} alt="" className='linksImg' />
+           <a href="https://www.facebook.com/profile.php?id=100028048304233&mibextid=ZbWKwL" tab="_"><img src={Link1} alt="" className='linksImg' /></a> 
+          <a href='https://www.instagram.com/sunnygaur2272/'><img src={Link3} alt="" className='linksImg' /></a>  
             <img src={Link2} alt="" className='linksImg' />
-            <img src={Link3} alt="" className='linksImg' />
             <img src={Link4} alt="" className='linksImg' />  
           </div>
         </form>

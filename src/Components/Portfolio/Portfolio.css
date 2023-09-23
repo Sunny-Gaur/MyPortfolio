@@ -47,6 +47,36 @@ flex-wrap: wrap;
     box-shadow:0 0 10px #39ff14;
 }
 
+/* message */
+.message-container2{
+    display: flex;
+    justify-content: center;
+    /* width: 100vw; */
+}
+.pop-up{
+    width: 300px;
+    height: 200px;
+    border: 3px solid red;
+    background-color: #ffff;
+    color: black; 
+     border-radius: 6px;
+    text-align: center;
+    padding: 0 30px 30px;
+    position: fixed;
+    z-index: 10;
+    display: none;
+ } 
+ .message-container3{
+    display: flex;
+    justify-content: center;
+ }
+.pop-up3{
+    text-align: center;
+    position: fixed;
+    top: 100px;
+    z-index: 10;
+    display: none;
+ } 
 
 .workbtn{
     color: black;
@@ -56,6 +86,7 @@ flex-wrap: wrap;
     background-color:white;
     margin: 3rem 0;
 }
+
 .workbtn:hover{
     color: #111;
     background: #39ff14;
