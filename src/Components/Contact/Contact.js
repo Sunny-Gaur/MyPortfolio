@@ -10,26 +10,7 @@ import Link3 from "../../Assets/Assets/instagram.png";
 import Link4 from "../../Assets/Assets/youtube.png";
 import  emailjs from '@emailjs/browser';
 import { useRef } from 'react'
-import {Link} from 'react-scroll';
 export default function Contact() {
-  // const form = useRef();
-  // const sendEmail = (e) => {
-  //   e.preventDefault();
-  //   emailjs.sendForm('service_6gw5ib1', 'template_r2v2ynk', form.current, 'l5Hz3RgIx0NRmjxjB')
-  //     .then((result) => {
-  //         console.log(result.text);
-  //         document.querySelector(".pop-up").style.display="block";
-  //         setTimeout(()=>{
-  //           document.querySelector(".pop-up").style.display="none";
-  //         },2000)
-  //     }, (error) => {
-  //         console.log(error.text+"my");
-  //         document.querySelector(".pop-up2").style.display="block";
-  //         setTimeout(()=>{
-  //           document.querySelector(".pop-up2").style.display="none";
-  //         },2000)
-  //     });
-  // };
   const form = useRef();
 
 const sendEmail = (e) => {
@@ -44,6 +25,8 @@ const sendEmail = (e) => {
     alert("Please fill out all required fields.");
     return;
   }
+
+
 
   // Rest of your email sending logic
   emailjs.sendForm('service_6gw5ib1', 'template_r2v2ynk', form.current, 'l5Hz3RgIx0NRmjxjB')
